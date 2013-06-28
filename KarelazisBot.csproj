@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F64EFC7A-9B9A-496E-BD6E-C2D3604D81AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KarelazisBot</RootNamespace>
+    <AssemblyName>KarelazisBot</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>universal_binary.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\KarelazisBot.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\KarelazisBot.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSScriptLibrary, Version=3.3.0.0, Culture=neutral, PublicKeyToken=70fcc3d18c749033, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\CSScriptLibrary.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Extentions.cs" />
+    <Compile Include="Forms\Cavebot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cavebot.Designer.cs">
+      <DependentUpon>Cavebot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientChooser.Designer.cs">
+      <DependentUpon>ClientChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Healer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Healer.Designer.cs">
+      <DependentUpon>Healer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hotkeys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hotkeys.Designer.cs">
+      <DependentUpon>Hotkeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HotkeysHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HotkeysHelp.Designer.cs">
+      <DependentUpon>HotkeysHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainHub.Designer.cs">
+      <DependentUpon>MainHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MapViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MapViewer.Designer.cs">
+      <DependentUpon>MapViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectPropertiesLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectPropertiesLoader.Designer.cs">
+      <DependentUpon>ObjectPropertiesLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectPropertyGetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectPropertyGetter.Designer.cs">
+      <DependentUpon>ObjectPropertyGetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PvP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PvP.Designer.cs">
+      <DependentUpon>PvP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scripter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Scripter.Designer.cs">
+      <DependentUpon>Scripter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaypointEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaypointEditor.Designer.cs">
+      <DependentUpon>WaypointEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CacheManager.cs" />
+    <Compile Include="Modules\Cavebot.cs" />
+    <Compile Include="Modules\Cavebot.Loot.cs" />
+    <Compile Include="Modules\Cavebot.Looter.cs" />
+    <Compile Include="Modules\Cavebot.Script.cs" />
+    <Compile Include="Modules\Cavebot.Settings.cs" />
+    <Compile Include="Modules\Cavebot.Targeting.cs" />
+    <Compile Include="Modules\Cavebot.Walker.cs" />
+    <Compile Include="Modules\Cavebot.Waypoint.cs" />
+    <Compile Include="Modules\Combobot.cs" />
+    <Compile Include="Modules\ExperienceCounter.cs" />
+    <Compile Include="Modules\Healer.cs" />
+    <Compile Include="Modules\Hotkeys.Action.cs" />
+    <Compile Include="Modules\Hotkeys.cs" />
+    <Compile Include="Modules\Hotkeys.GlobalKeyboardHook.cs" />
+    <Compile Include="Modules\MapViewer.cs" />
+    <Compile Include="Modules\ScriptManager.VariableCollection.cs" />
+    <Compile Include="Modules\Website.Character.cs" />
+    <Compile Include="Modules\Website.cs" />
+    <Compile Include="Modules\Website.Guild.cs" />
+    <Compile Include="Objects\Client.LoginHelper.LoginServer.cs" />
+    <Compile Include="Objects\CreatureData.cs" />
+    <Compile Include="Objects\CreatureData.Damage.cs" />
+    <Compile Include="Objects\CreatureData.Loot.cs" />
+    <Compile Include="Objects\DataCollection.cs" />
+    <Compile Include="Objects\ItemData.Container.cs" />
+    <Compile Include="Objects\ItemData.cs" />
+    <Compile Include="Objects\ItemData.Food.cs" />
+    <Compile Include="Objects\ItemData.Rune.cs" />
+    <Compile Include="Objects\LocalPathFinder.cs" />
+    <Compile Include="Objects\Map.TileObject.cs" />
+    <Compile Include="Objects\MiniMap.CachedChunk.cs" />
+    <Compile Include="Objects\MiniMap.ChunkCollection.cs" />
+    <Compile Include="Objects\MiniMap.cs" />
+    <Compile Include="Modules\ScriptManager.cs" />
+    <Compile Include="Modules\TextToSpeech.cs" />
+    <Compile Include="Objects\ActionState.cs" />
+    <Compile Include="Objects\Addresses.cs" />
+    <Compile Include="Objects\AreaEffect.cs" />
+    <Compile Include="Objects\BattleList.cs" />
+    <Compile Include="Objects\Caller.cs" />
+    <Compile Include="Objects\CharacterList.cs" />
+    <Compile Include="Objects\Client.AreaEffectsCollection.cs" />
+    <Compile Include="Objects\Client.cs" />
+    <Compile Include="Objects\Client.LoginHelper.cs" />
+    <Compile Include="Objects\Client.ModuleCollection.cs" />
+    <Compile Include="Objects\Client.PacketCollection.cs" />
+    <Compile Include="Objects\Container.cs" />
+    <Compile Include="Objects\Creature.cs" />
+    <Compile Include="Objects\GameWindow.cs" />
+    <Compile Include="Objects\GameWindow.Message.cs" />
+    <Compile Include="Objects\Inventory.cs" />
+    <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\ItemList.cs" />
+    <Compile Include="Objects\ItemLocation.cs" />
+    <Compile Include="Objects\Location.cs" />
+    <Compile Include="Objects\Map.cs" />
+    <Compile Include="Objects\Memory.cs" />
+    <Compile Include="Objects\MiniMap.FastChunk.cs" />
+    <Compile Include="Objects\MiniMap.IChunk.cs" />
+    <Compile Include="Objects\MiniMap.MergedChunk.cs" />
+    <Compile Include="Objects\MiniMap.Node.cs" />
+    <Compile Include="Objects\PathFinder.Comparer.cs" />
+    <Compile Include="Objects\PathFinder.cs" />
+    <Compile Include="Objects\PathFinder.PriorityQueue.cs" />
+    <Compile Include="Objects\ObjectProperties.cs" />
+    <Compile Include="Objects\Packet.cs" />
+    <Compile Include="Objects\Player.cs" />
+    <Compile Include="Objects\Script.cs" />
+    <Compile Include="Objects\StatusBar.cs" />
+    <Compile Include="Objects\Map.Tile.cs" />
+    <Compile Include="Objects\Map.TileCollection.cs" />
+    <Compile Include="Objects\Vip.Character.cs" />
+    <Compile Include="Objects\Vip.cs" />
+    <Compile Include="Objects\Window.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinAPI.cs" />
+    <EmbeddedResource Include="Forms\Cavebot.resx">
+      <DependentUpon>Cavebot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientChooser.resx">
+      <DependentUpon>ClientChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Healer.resx">
+      <DependentUpon>Healer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hotkeys.resx">
+      <DependentUpon>Hotkeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HotkeysHelp.resx">
+      <DependentUpon>HotkeysHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainHub.resx">
+      <DependentUpon>MainHub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MapViewer.resx">
+      <DependentUpon>MapViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ObjectPropertiesLoader.resx">
+      <DependentUpon>ObjectPropertiesLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ObjectPropertyGetter.resx">
+      <DependentUpon>ObjectPropertyGetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PvP.resx">
+      <DependentUpon>PvP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Scripter.resx">
+      <DependentUpon>Scripter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaypointEditor.resx">
+      <DependentUpon>WaypointEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <Compile Include="Modules\Cavebot.Target.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\firstaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\skull_staff.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="universal_binary.ico" />
+    <None Include="Resources\hudfont.TTF" />
+    <None Include="Resources\Tome_of_Knowledge.gif" />
+    <None Include="Resources\SuddenDeath.gif" />
+    <None Include="Resources\skull_staff.gif" />
+    <None Include="Resources\scroll.png" />
+    <None Include="Resources\padlock.gif" />
+    <None Include="Resources\map.gif" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\Hero.gif" />
+    <None Include="Resources\firstaid.png" />
+    <None Include="Resources\bomb.png" />
+    <None Include="Images\map.gif" />
+    <None Include="Images\bomb.png" />
+    <None Include="Images\padlock.gif" />
+    <None Include="Images\key.png" />
+    <None Include="Images\Tome_of_Knowledge.gif" />
+    <None Include="Images\scroll.png" />
+    <None Include="Images\SuddenDeath.gif" />
+    <None Include="Images\Hero.gif" />
+    <Content Include="Images\9j0rvath.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
